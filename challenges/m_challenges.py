@@ -19,3 +19,17 @@ def max_zeros(n):
             max_zeros = count_zeros
             max_base = i
     return max_base
+
+
+def max_subarray(inputArray):
+    """ Given an array of integers inputArray, find the contiguous subarray
+        which has the maximum sum. Return that sum.
+    """
+    best_sum = 0
+    current_sum = 0
+
+    for n in inputArray:
+        current_sum = max(0, current_sum + n)
+        best_sum = max(best_sum, current_sum)
+
+    return best_sum
