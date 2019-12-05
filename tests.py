@@ -1,7 +1,7 @@
 import unittest
 
 from challenges.v_challenges import visits_on_circular_road
-from challenges.m_challenges import max_zeros
+from challenges.m_challenges import max_zeros, max_subarray
 
 
 class TestVisitsOnCircularRoad(unittest.TestCase):
@@ -34,6 +34,16 @@ class TestMaxZeros(unittest.TestCase):
         result = max_zeros(n)
         self.assertEqual(result, 5)
 
+class TestMaxSubarray(unittest.TestCase):
+    def test_1(self):
+        input_array=[-1, 7, -2, 3, 4, 0, 1, -1]
+        result = max_subarray(input_array)
+        self.assertEqual(result, 13)
+
+    def test_2(self):
+        input_array=[-1, -2, -5, -1]
+        result = max_subarray(input_array)
+        self.assertEqual(result, 0)
 
 if __name__ == "__main__":
     unittest.main()
