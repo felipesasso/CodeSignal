@@ -1,7 +1,9 @@
 import unittest
 
+from challenges.l_challenges import last_digit_reg_exp
 from challenges.v_challenges import visits_on_circular_road
 from challenges.m_challenges import max_zeros, max_subarray
+
 
 
 class TestVisitsOnCircularRoad(unittest.TestCase):
@@ -44,6 +46,18 @@ class TestMaxSubarray(unittest.TestCase):
         input_array=[-1, -2, -5, -1]
         result = max_subarray(input_array)
         self.assertEqual(result, 0)
+
+class TestLastDigitRegExp(unittest.TestCase):
+    def test_1(self):
+        input_string="var_1__Int"
+        result = last_digit_reg_exp(input_string)
+        self.assertEqual(result, '1')
+
+    def test_2(self):
+        input_string="qq2q"
+        result = last_digit_reg_exp(input_string)
+        self.assertEqual(result, '2')
+
 
 if __name__ == "__main__":
     unittest.main()
