@@ -3,8 +3,7 @@ import unittest
 from challenges.l_challenges import last_digit_reg_exp
 from challenges.v_challenges import visits_on_circular_road
 from challenges.m_challenges import max_zeros, max_subarray
-
-
+from challenges.n_challenges import number_of_operations
 
 class TestVisitsOnCircularRoad(unittest.TestCase):
     def test_1(self):
@@ -18,7 +17,6 @@ class TestVisitsOnCircularRoad(unittest.TestCase):
         visits_order = [3]
         result = visits_on_circular_road(n, visits_order)
         self.assertEqual(result, 1)
-
 
 class TestMaxZeros(unittest.TestCase):
     def test_1(self):
@@ -58,6 +56,19 @@ class TestLastDigitRegExp(unittest.TestCase):
         result = last_digit_reg_exp(input_string)
         self.assertEqual(result, '2')
 
+class TestNumberOfOperations(unittest.TestCase):
+
+    def test_1(self):
+        a = 432
+        b = 72
+        result = number_of_operations(a, b)
+        self.assertEqual(result, 4)
+
+    def test_2(self):
+        a = 7
+        b = 14
+        result = number_of_operations(a, b)
+        self.assertEqual(result, 1)
 
 if __name__ == "__main__":
     unittest.main()
