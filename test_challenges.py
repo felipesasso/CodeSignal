@@ -4,6 +4,7 @@ from challenges.l_challenges import last_digit_reg_exp
 from challenges.v_challenges import visits_on_circular_road
 from challenges.m_challenges import max_zeros, max_subarray
 from challenges.n_challenges import number_of_operations
+from challenges.s_challenges import square_digits_sequence
 
 class TestVisitsOnCircularRoad(unittest.TestCase):
     def test_1(self):
@@ -69,6 +70,17 @@ class TestNumberOfOperations(unittest.TestCase):
         b = 14
         result = number_of_operations(a, b)
         self.assertEqual(result, 1)
+
+class TestSquareDigitsSequence(unittest.TestCase):
+    def test_1(self):
+        a0 = 16
+        result = square_digits_sequence(a0)
+        self.assertEqual(result, 9)
+
+    def test_2(self):
+        a0 = 612
+        result = square_digits_sequence(a0)
+        self.assertEqual(result, 16)
 
 if __name__ == "__main__":
     unittest.main()
