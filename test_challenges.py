@@ -1,5 +1,6 @@
 import unittest
 
+from challenges.a_challenges import arithmetic_expression
 from challenges.l_challenges import last_digit_reg_exp
 from challenges.v_challenges import visits_on_circular_road
 from challenges.m_challenges import max_zeros, max_subarray
@@ -81,6 +82,22 @@ class TestSquareDigitsSequence(unittest.TestCase):
         a0 = 612
         result = square_digits_sequence(a0)
         self.assertEqual(result, 16)
+
+class TestArithmeticExpression(unittest.TestCase):
+
+    def test_1(self):
+        a= 2
+        b= 3
+        c= 5
+        result = arithmetic_expression(a,b,c)
+        self.assertTrue(result)
+    def test_2(self):
+        a= 8
+        b= 3
+        c= 2
+        result = arithmetic_expression(a,b,c)
+        self.assertFalse(result)
+
 
 if __name__ == "__main__":
     unittest.main()
