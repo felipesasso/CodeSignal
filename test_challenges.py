@@ -1,6 +1,7 @@
 import unittest
 
 from challenges.a_challenges import arithmetic_expression
+from challenges.e_challenges import excel_sheet_column_number
 from challenges.l_challenges import last_digit_reg_exp
 from challenges.v_challenges import visits_on_circular_road
 from challenges.m_challenges import max_zeros, max_subarray
@@ -98,6 +99,21 @@ class TestArithmeticExpression(unittest.TestCase):
         result = arithmetic_expression(a,b,c)
         self.assertFalse(result)
 
+class TestEChallenges(unittest.TestCase):
+
+    def test_excel_sheet_column_number_1(self):
+        s = 'AB'
+        expected = 28
+
+        result = excel_sheet_column_number(s)
+        self.assertEqual(result, expected)
+
+    def test_excel_sheet_column_number_2(self):
+        s = 'RABBIT'
+        expected = 214358502
+
+        result = excel_sheet_column_number(s)
+        self.assertEqual(result, expected)
 
 if __name__ == "__main__":
     unittest.main()
