@@ -6,6 +6,7 @@ from challenges.l_challenges import last_digit_reg_exp
 from challenges.v_challenges import visits_on_circular_road
 from challenges.m_challenges import max_zeros, max_subarray
 from challenges.n_challenges import number_of_operations
+from challenges.r_challenges import reverse_integer
 from challenges.s_challenges import square_digits_sequence
 
 class TestVisitsOnCircularRoad(unittest.TestCase):
@@ -114,6 +115,16 @@ class TestEChallenges(unittest.TestCase):
 
         result = excel_sheet_column_number(s)
         self.assertEqual(result, expected)
+
+class TestRChallenges(unittest.TestCase):
+    def test_reverse_integer_1(self):
+        n = 123
+        result = reverse_integer(n)
+        self.assertEqual(321, result)
+    def test_reverse_integer_2(self):
+        n = -1515
+        result = reverse_integer(n)
+        self.assertEqual(-5151, result)
 
 if __name__ == "__main__":
     unittest.main()
